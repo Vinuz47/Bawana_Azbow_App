@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mosam_azbow/Screens/subscription.dart';
+import 'package:mosam_azbow/Screens/Profile/main_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       //   index: 4,
       // ),
 
-      home: const SubscriptionScreen(
+      home: MainProfileScreen(
           //index: 4,
           ),
     );

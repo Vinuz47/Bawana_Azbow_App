@@ -1,10 +1,11 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:mosam_azbow/Data/subscription_data.dart';
-import 'package:mosam_azbow/Model/subscription_model.dart';
-import 'package:mosam_azbow/Screens/all_book_display_page.dart';
-import 'package:mosam_azbow/Widget/subscription_list_tile.dart';
+import 'package:mosam_azbow/data/models/subscription_model.dart';
+import 'package:mosam_azbow/data/repository/subscription_data.dart';
+import 'package:mosam_azbow/presentation/screens/all_book_display_page.dart';
+import 'package:mosam_azbow/presentation/widgets/subscription_list_tile.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 
 class SubscriptionScreen extends StatefulWidget {

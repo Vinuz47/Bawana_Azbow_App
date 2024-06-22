@@ -3,11 +3,12 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:mosam_azbow/Data/book_data.dart';
-import 'package:mosam_azbow/Data/comment_data.dart';
-import 'package:mosam_azbow/Model/book_model.dart';
-import 'package:mosam_azbow/Screens/all_book.dart';
-import 'package:mosam_azbow/Widget/comment_widget.dart';
+import 'package:mosam_azbow/data/models/book_model.dart';
+import 'package:mosam_azbow/data/repository/book_data.dart';
+import 'package:mosam_azbow/data/repository/comment_data.dart';
+import 'package:mosam_azbow/presentation/screens/all_book.dart';
+import 'package:mosam_azbow/presentation/widgets/comment_widget.dart';
+
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class DetailsPage extends StatefulWidget {
@@ -369,6 +370,8 @@ class _DetailsPageState extends State<DetailsPage> {
             const SizedBox(
               height: 280,
             ),
+            
+            //comment section
             SizedBox(
                 height: 150,
                 child: PageView(

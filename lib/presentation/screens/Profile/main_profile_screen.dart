@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:mosam_azbow/Data/profile_details_data.dart';
-import 'package:mosam_azbow/Model/profile_details_model.dart';
-import 'package:mosam_azbow/Screens/all_book_display_page.dart';
-import 'package:mosam_azbow/Screens/subscription.dart';
-import 'package:mosam_azbow/Widget/image_profile_widget.dart';
-import 'package:mosam_azbow/Widget/profile_details_widget.dart';
+import 'package:mosam_azbow/data/models/profile_details_model.dart';
+import 'package:mosam_azbow/data/repository/profile_details_data.dart';
+import 'package:mosam_azbow/presentation/screens/Profile/setting_screen.dart';
+import 'package:mosam_azbow/presentation/screens/all_book_display_page.dart';
+import 'package:mosam_azbow/presentation/screens/subscription.dart';
+import 'package:mosam_azbow/presentation/widgets/image_profile_widget.dart';
+import 'package:mosam_azbow/presentation/widgets/profile_details_widget.dart';
+
 
 class MainProfileScreen extends StatefulWidget {
   const MainProfileScreen({super.key});
@@ -20,56 +22,7 @@ class _MainProfileScreenState extends State<MainProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff1E1A1A),
-      // appBar: AppBar(
-      //   backgroundColor: Colors.transparent,
-    
-      //   //Center title
-      //   title: const Center(
-      //     child: Text(
-      //       'My Profile',
-      //       style: TextStyle(
-      //           color: Color(0xffDCDCDC),
-      //           fontWeight: FontWeight.w600,
-      //           fontSize: 16),
-      //     ),
-      //   ),
-    
-      //   //setting buton icon
-      //   actions: <Widget>[
-      //     Padding(
-      //       padding: const EdgeInsets.only(right: 24),
-      //       child: IconButton(
-      //         icon: const Icon(
-      //           Icons.settings,
-      //           color: Colors.white,
-      //         ),
-      //         onPressed: () {
-      //           // setting page to navigate
-      //         },
-      //       ),
-      //     )
-      //   ],
-    
-      //   //previous button icon
-      //   leading: Padding(
-      //     padding: const EdgeInsets.only(left: 24),
-      //     child: IconButton(
-      //       icon: const Icon(
-      //         Icons.arrow_circle_left_sharp,
-      //         color: Colors.white,
-      //         size: 32,
-      //       ),
-      //       onPressed: () {
-      //         //navigate to previous page
-      //         Navigator.push(
-      //           context,
-      //           MaterialPageRoute(
-      //               builder: (context) => const SubscriptionScreen()),
-      //         );
-      //       },
-      //     ),
-      //   ),
-      // ),
+      
       //bottom navigation bar
       bottomNavigationBar: BottomAppBar(
         color: const Color(0xff161517),
@@ -228,6 +181,7 @@ class _MainProfileScreenState extends State<MainProfileScreen> {
                   ),
                 ),
             
+            //setting icon
                 Padding(
                   padding: const EdgeInsets.only(right: 24),
                   child: IconButton(
@@ -237,6 +191,12 @@ class _MainProfileScreenState extends State<MainProfileScreen> {
                     ),
                     onPressed: () {
                       // setting page to navigate
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const SettingScreen()),
+                          );
                     },
                   ),
                 )

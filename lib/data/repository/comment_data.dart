@@ -1,4 +1,6 @@
-import 'package:mosam_azbow/Model/comment_model.dart';
+
+
+import 'package:mosam_azbow/data/models/comment_model.dart';
 
 class CommentData {
   final List<Comment> commentList = [

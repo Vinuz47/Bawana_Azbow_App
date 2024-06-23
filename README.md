@@ -17,4 +17,5 @@ samples, guidance on mobile development, and a full API reference.
 "# Bawana_Azbow_App" 
 
 2024.06.19 - completed the Profile UI 1 part.
+2024.06.19 - completed the Profile UI part completwly.
 

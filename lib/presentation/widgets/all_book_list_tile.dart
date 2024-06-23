@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:rate_in_stars/rate_in_stars.dart';
 class AllBookListTile extends StatefulWidget {
   final String imageUrl;
   final String title;
@@ -121,34 +121,16 @@ class _AllBookListTileState extends State<AllBookListTile> {
                           //mainAxisAlignment: MainAxisAlignment.start,
                           //crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const ImageIcon(
-                              AssetImage('assets/icons/star.png'),
-                              color: Colors.yellow,
-                              size: 10,
+                            //rating starts
+                            RatingStars(
+                              editable: true,
+                              rating: widget.ratings,
+                              color: Colors.amber,
+                              iconSize: 12,
                             ),
-                            const ImageIcon(
-                              AssetImage('assets/icons/star.png'),
-                              color: Colors.yellow,
-                              size: 10,
-                            ),
-                            const ImageIcon(
-                              AssetImage('assets/icons/star.png'),
-                              color: Colors.yellow,
-                              size: 10,
-                            ),
-                            const ImageIcon(
-                              AssetImage('assets/icons/star.png'),
-                              color: Colors.yellow,
-                              size: 10,
-                            ),
-                            const ImageIcon(
-                              AssetImage('assets/icons/star.png'),
-                              color: Colors.yellow,
-                              size: 10,
-                            ),
-                            const SizedBox(
-                              width: 4,
-                            ),
+
+                            const SizedBox(width: 5),
+                            //rate in text widget
                             Text(
                               widget.ratings.toString(), //rating geting
 
@@ -159,7 +141,7 @@ class _AllBookListTileState extends State<AllBookListTile> {
                               ),
                             ),
                             const SizedBox(
-                              width: 1,
+                              width: 3,
                             ),
                             Text(
                               '(' +

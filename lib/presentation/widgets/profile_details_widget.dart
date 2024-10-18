@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mosam_azbow/app_string.dart';
+import 'package:mosam_azbow/presentation/constants/app_strings.dart';
+import 'package:mosam_azbow/presentation/screens/Profile/edit_profile_screen.dart';
 
 class ProfileDetailsWidget extends StatefulWidget {
   final String name;
@@ -45,6 +46,11 @@ class _nameState extends State<ProfileDetailsWidget> {
                 IconButton(
                   onPressed: () {
                     //edit function
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const EditProfileScreen()),
+                    );
                   },
                   icon: const ImageIcon(
                     AssetImage('assets/icons/edit.png'),
@@ -53,7 +59,7 @@ class _nameState extends State<ProfileDetailsWidget> {
                 )
               ],
             ),
-      
+
             //subscription time period box
             Padding(
               padding: const EdgeInsets.only(left: 16, right: 16, top: 20),
@@ -74,11 +80,11 @@ class _nameState extends State<ProfileDetailsWidget> {
                           height: 64,
                           width: 64),
                     ),
-      
+
                     const SizedBox(
                       width: 8,
                     ),
-      
+
                     //main title
                     Padding(
                       padding: const EdgeInsets.only(top: 20),
@@ -92,7 +98,7 @@ class _nameState extends State<ProfileDetailsWidget> {
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600),
                           ),
-      
+
                           //subtile
                           Text(
                             widget.timePeriod,
@@ -104,11 +110,11 @@ class _nameState extends State<ProfileDetailsWidget> {
                         ],
                       ),
                     ),
-      
+
                     const SizedBox(
                       width: 26,
                     ),
-      
+
                     //trail Icon
                     Padding(
                       padding: const EdgeInsets.only(right: 2),
@@ -126,7 +132,7 @@ class _nameState extends State<ProfileDetailsWidget> {
                 ),
               ),
             ),
-      
+
             //user details box
             Padding(
               padding: const EdgeInsets.only(left: 16, right: 16, top: 24),
@@ -150,11 +156,17 @@ class _nameState extends State<ProfileDetailsWidget> {
                               style: stringStyle(
                                   Colors.white, FontWeight.w600, 16),
                             ),
-      
+
                             //edit icon
                             IconButton(
                               onPressed: () {
                                 //edit function
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const EditProfileScreen()),
+                                );
                               },
                               icon: const ImageIcon(
                                 AssetImage('assets/icons/edit.png'),
@@ -242,7 +254,7 @@ class _nameState extends State<ProfileDetailsWidget> {
                     ),
                   )),
             ),
-      
+
             //statistic box
             Padding(
               padding: const EdgeInsets.only(left: 16, right: 16, top: 24),

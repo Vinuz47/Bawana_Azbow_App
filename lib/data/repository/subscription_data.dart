@@ -1,4 +1,6 @@
-import 'package:mosam_azbow/Model/subscription_model.dart';
+
+
+import 'package:mosam_azbow/data/models/subscription_model.dart';
 
 class SubscriptionData {
   final List<Subscription> subscriptionList = [

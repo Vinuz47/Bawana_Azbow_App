@@ -1,8 +1,9 @@
 /// The class `AllBookDisplayScreen` is a StatefulWidget in Flutter that displays a column with a stack containing a positioned container.
 import 'package:flutter/material.dart';
-import 'package:mosam_azbow/Model/book_model.dart';
-import 'package:mosam_azbow/Screens/details_page.dart';
-import 'package:mosam_azbow/Widget/all_book_list_tile.dart';
+import 'package:mosam_azbow/data/models/book_model.dart';
+import 'package:mosam_azbow/presentation/screens/details_page.dart';
+import 'package:mosam_azbow/presentation/widgets/all_book_list_tile.dart';
+
 
 class AllBookDisplayScreen extends StatefulWidget {
   const AllBookDisplayScreen({super.key});

@@ -1,4 +1,5 @@
-import 'package:mosam_azbow/Model/book_model.dart';
+
+import 'package:mosam_azbow/data/models/book_model.dart';
 
 class BookData {
   final List<Books> bookList = [

@@ -1,5 +1,6 @@
 class ProfileDetails{
   final String name;
+  final String username;
   final String number;
   final String email;
   final String startingDate;
@@ -9,6 +10,7 @@ class ProfileDetails{
 
   ProfileDetails({
     required this.name,
+    required this.username,
     required this.number,
     required this.email,
     required this.startingDate,
